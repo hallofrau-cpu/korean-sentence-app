@@ -1,1 +1,0 @@
-# korean-sentence-app
