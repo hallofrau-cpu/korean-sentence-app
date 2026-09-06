@@ -123,7 +123,7 @@ def feedback_html(result):
 def progress_panel():
     passed = sum(
         1 for qid in QUESTION_TITLES
-        if st.session_state.get(f"result_{qid}", {}).get("status") == "pass"
+        if (st.session_state.get(f"result_{qid}") or {}).get("status") == "pass"
     )
     st.progress(passed / 9)
     st.caption(f"현재 통과: {passed} / 9문항")
